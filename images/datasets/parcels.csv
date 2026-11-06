@@ -1,0 +1,9 @@
+id,customer,deadline_hours,priority,weight
+P01,North Clinic,5,10,6
+P02,Green Tower,12,7,5
+P03,City Library,8,9,7
+P04,West Office,24,5,4
+P05,Central School,3,10,8
+P06,Lake Apartments,18,6,3
+P07,Tech Park,10,8,6
+P08,Market Street,30,4,2

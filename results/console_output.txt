@@ -1,0 +1,44 @@
+==============================================================
+                 MINI-COURIER PLANNER
+==============================================================
+
+1) PARCEL PRIORITIZATION (deadline, priority)
+  P05  | deadline= 3h | priority=10 | weight= 8kg
+  P01  | deadline= 5h | priority=10 | weight= 6kg
+  P03  | deadline= 8h | priority= 9 | weight= 7kg
+  P07  | deadline=10h | priority= 8 | weight= 6kg
+  P02  | deadline=12h | priority= 7 | weight= 5kg
+  P06  | deadline=18h | priority= 6 | weight= 3kg
+  P04  | deadline=24h | priority= 5 | weight= 4kg
+  P08  | deadline=30h | priority= 4 | weight= 2kg
+
+2) PACKING PLAN (vehicle capacity = 18 kg)
+  SELECT P01  weight=6kg  priority=10
+  SELECT P03  weight=7kg  priority=9
+  SELECT P06  weight=3kg  priority=6
+  SELECT P08  weight=2kg  priority=4
+  Total weight: 18 kg
+  Total priority value: 29
+
+3) SHORTEST PATHS FROM DEPOT
+  D -> D: 0.0 km
+  D -> A: 4.0 km
+  D -> B: 6.0 km
+  D -> C: 9.0 km
+  D -> E: 11.0 km
+
+4) APPROXIMATE DELIVERY TOUR (nearest-neighbor)
+  D -> A -> B -> C -> E -> D
+  Tour distance: 22.0 km
+
+5) SAMPLE SHORTEST PATH RECONSTRUCTION
+  D -> A: D -> A
+
+6) RUNTIME BENCHMARKS
+  input_size=20 | sorting_ms=0.0062 | knapsack_ms=0.1272 | dijkstra_ms=0.0161
+  input_size=50 | sorting_ms=0.0103 | knapsack_ms=0.3250 | dijkstra_ms=0.0309
+  input_size=100 | sorting_ms=0.0200 | knapsack_ms=0.6143 | dijkstra_ms=0.0679
+  input_size=200 | sorting_ms=0.0463 | knapsack_ms=1.2106 | dijkstra_ms=0.1198
+
+Benchmark data saved to results/benchmark_results.json
+==============================================================
