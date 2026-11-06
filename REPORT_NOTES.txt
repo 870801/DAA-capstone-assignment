@@ -1,0 +1,1 @@
+Before submitting: fill in student name, roll number, course/section and university on page 1. Run python main.py on your own computer and verify the output. Sample datasets are synthetic.
